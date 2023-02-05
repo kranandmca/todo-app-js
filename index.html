@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <title>Todo App</title>
   </head>
   <body>
@@ -13,8 +13,10 @@
       <div class="content">
         <div class="todo-header">
           <h1>Todo List</h1>
-          <input type="text" id="input-todo" placeholder="Todo" />
-          <button class="add-todo">Add</button>
+          <form id="add-todo">
+            <input type="text" id="input-todo" placeholder="Todo" required />
+            <input type="submit" value="Add" />
+          </form>
         </div>
         <div class="tasks" id="todo-container">
           <div class="task">
