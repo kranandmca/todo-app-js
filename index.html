@@ -12,21 +12,13 @@
     <div class="container">
       <div class="content">
         <div class="todo-header">
-          <h1>Todo List</h1>
-          <form id="add-todo">
+          <h1>Todo List(<span id="todo-count">0</span>)</h1>
+          <form id="form-todo">
             <input type="text" id="input-todo" placeholder="Todo" required />
-            <input type="submit" value="Add" />
+            <input class="add-todo" type="submit" value="Add" />
           </form>
         </div>
-        <div class="tasks" id="todo-container">
-          <div class="task">
-            <div class="list">
-              <input type="checkbox" id="radio" />
-              <p>First task</p>
-            </div>
-            <button class="del-todo">Delete</button>
-          </div>
-        </div>
+        <div class="tasks" id="todo-container"></div>
       </div>
     </div>
   </body>

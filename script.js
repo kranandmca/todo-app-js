@@ -1,10 +1,12 @@
 const input = document.getElementById('input-todo');
-const addBtn = document.querySelector('#add-todo');
+const todoCount = document.getElementById('todo-count');
+const addBtn = document.querySelector('#form-todo');
 const todoContainer = document.getElementById('todo-container');
+var count = 0;
 
 addBtn.addEventListener('submit', addTodo);
 
-function addTodo() {
+function addTodo(event) {
   const newTodo = input.value;
   const checkbox = document.createElement('input');
   checkbox.type = 'checkbox';
@@ -30,5 +32,24 @@ function addTodo() {
   todoContainer.appendChild(taskContainer);
 
   input.value = '';
+  count++;
+  todoCount.innerText = count;
+  taskComplete(checkbox, p);
+  taskDelete(deleteBtn);
   event.preventDefault();
+}
+
+function taskComplete(checkbox, p) {
+  checkbox.addEventListener('click', (e) => {
+    p.classList.toggle('task-completed');
+  });
+}
+
+function taskDelete(deleteBtn) {
+  deleteBtn.addEventListener('click', (e) => {
+    const taskToDelete = e.currentTarget.parentElement;
+    todoContainer.removeChild(taskToDelete);
+    count--;
+    todoCount.innerText = count;
+  });
 }
