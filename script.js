@@ -1,11 +1,16 @@
+// get todo input
 const input = document.getElementById('input-todo');
+// For todo item count
 const todoCount = document.getElementById('todo-count');
+// get todo form
 const addBtn = document.querySelector('#form-todo');
+// todo container
 const todoContainer = document.getElementById('todo-container');
 var count = 0;
-
+// form submit event
 addBtn.addEventListener('submit', addTodo);
 
+// To create todo item
 function addTodo(event) {
   const newTodo = input.value;
   const checkbox = document.createElement('input');
@@ -39,12 +44,14 @@ function addTodo(event) {
   event.preventDefault();
 }
 
+// To mark strikethrough completed todo
 function taskComplete(checkbox, p) {
   checkbox.addEventListener('click', (e) => {
     p.classList.toggle('task-completed');
   });
 }
 
+// To delete Todo item
 function taskDelete(deleteBtn) {
   deleteBtn.addEventListener('click', (e) => {
     const taskToDelete = e.currentTarget.parentElement;
