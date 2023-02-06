@@ -21,14 +21,12 @@ Create a Todolist app.
 # Tools used for hosting
 - Git
 # Live project Link
-https://todo-app-opal-psi.vercel.app
+https://kranandmca.github.io/todo-app-js
 
 # Steps to set project locally[Windows]
 - Go to terminal. Run below command:
      git clone https://github.com/kranandmca/todo-app-js.git
--  cd todo-app
 
- # Your project is set up . Test that on  http://localhost:3000
-
+ # Your project is set up . Go to todo-app-js folder and open index.html file in browser.
 
  
